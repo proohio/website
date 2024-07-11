@@ -64,14 +64,11 @@
         document.getElementById('executeButton').addEventListener('click', function() {
             const textarea = document.getElementById('inputText');
             const text = textarea.value;
+
+            const Table = text;
+
+            localStorage.setItem('rawText', Table);
             
-            const DeTable = '';
-
-            localStorage.setItem('rawText');
-
-            setTimeout(function() {
-                localStorage.setItem('rawText', DeTable);
-            }, 1000);
         });
 
         document.getElementById('clearButton').addEventListener('click', function() {
