@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>target</title>
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add some padding for better spacing */
+            font-family: Arial, sans-serif; /* Example font */
+            font-size: 20px; /* Base font size for body */
+            color: #fff; /* Text color */
+        }
+
+        input {
+            font-size: 30px;
+            width: 100%;
+            padding: 1%;
+            box-sizing: border-box;
+            text-align: left;
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+        }
+
+        button {
+            font-size: 18px;
+            width: 20%;
+            padding: 1%;
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 48px; /* Larger font size for headings */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            /* Adjust styles for smaller screens */
+            h1, h2 {
+                font-size: 36px; /* Adjusted font size for smaller screens */
+            }
+
+            input, button {
+                font-size: 20px; /* Adjusted font size for smaller screens */
+                padding: 12px 24px; /* Adjusted padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>UserId<input type="text" id="userIdInput"></h1>
+
+    <button id="hackButton">Hack</button>
+
+    <script>
+        // Add event listener to the button
+        document.getElementById('hackButton').addEventListener('click', function() {
+            
+            var userId = document.getElementById('userIdInput').value;
+            
+            var url = 'executor.html#' + encodeURIComponent(userId);
+            
+            window.location.href = url;
+
+        });
+    </script>
+    
+</body>
+</html>
