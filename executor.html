@@ -64,13 +64,10 @@
         document.getElementById('executeButton').addEventListener('click', function() {
             const textarea = document.getElementById('inputText');
             const text = textarea.value;
+            
+            const DeTable = '';
 
-            const userId = decodeURIComponent(window.location.hash.substring(1));
-
-            const Table = '\n{"UserId":"' + userId + '","Source":"' + text + '"}\n';
-            const DeTable = '\n{"UserId":"' + userId + '","Source":"None"}\n';
-
-            localStorage.setItem('rawText', Table);
+            localStorage.setItem('rawText');
 
             setTimeout(function() {
                 localStorage.setItem('rawText', DeTable);
