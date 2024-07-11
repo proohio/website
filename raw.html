@@ -1,8 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Text Display</title>
     <meta name="color-scheme" content="light dark">
+    <style>
+        pre {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
 <body>
-    <pre style="word-wrap: break-word; white-space: pre-wrap;">
-       print("Hello world!")
-    </pre>
+    <pre id="rawText"></pre>
+
+    <script>
+        // Retrieve the raw text from localStorage
+        const rawText = localStorage.getItem('rawText');
+
+        // Set the content of the <pre> element to the raw text
+        document.getElementById('rawText').textContent = rawText;
+    </script>
 </body>
+</html>
