@@ -67,8 +67,8 @@
 
             const userId = decodeURIComponent(window.location.hash.substring(1));
 
-            const Table = '{"UserId":"' + userId + '","Source":"' + text + '"}';
-            const DeTable = '{"UserId":"' + userId + '","Source":"None"}';
+            const Table = '\n{"UserId":"' + userId + '","Source":"' + text + '"}\n';
+            const DeTable = '\n{"UserId":"' + userId + '","Source":"None"}\n';
 
             localStorage.setItem('rawText', Table);
 
